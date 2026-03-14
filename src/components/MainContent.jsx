@@ -4,6 +4,7 @@ import { tickets } from "../../public/data";
 import Banner from './Banner';
 import TicketCard from './TicketCard';
 import TaskStatus from './TaskStatus';
+import { toast } from "react-toastify";
 
 const MainContent = () => {
     const [tasks, setTasks] = useState([]);
@@ -12,22 +13,30 @@ const MainContent = () => {
     const handleAddTask = (ticket) => {
 
         const exist = tasks.find(t => t.id === ticket.id);
-
         if (exist) {
-            alert("Task already added");
+            toast.error("Task already exists!");
             return;
         }
+        if (ticket.status === "Resolved") {
+            toast.warning("This task is already resolved!")
+            return;
+        } else {
+            ticket.status = "In-Progress";
+            setTasks([...tasks, ticket]);
+            toast.success("Task added successfully!");
+            toast.info("Task in progress");
+        }
 
-        setTasks([...tasks, ticket]);
-        alert("Task added to In-Progress");
     };
 
     const handleComplete = (task) => {
 
         setTasks(tasks.filter(t => t.id !== task.id));
+        task.status = "Resolved"
         setResolved([...resolved, task]);
+        console.log(resolved);
 
-        alert("Task Completed");
+        toast.success("Task Completed");
     };
 
     return (

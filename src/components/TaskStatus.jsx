@@ -37,7 +37,7 @@ const TaskStatus = ({ tasks, resolved, onComplete }) => {
                 </p>
             ) : (
                 resolved.map(task => (
-                    <p key={task.id} className="text-sm text-gray-500">
+                    <p key={task.id} className="text-sm text-gray-500 bg-[#E0E7FF] p-2">
                         {task.title}
                     </p>
                 ))
