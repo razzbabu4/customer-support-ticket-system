@@ -2,7 +2,7 @@ import React from 'react';
 
 const NavBar = () => {
     return (
-        <div className="navbar bg-base-100 shadow-sm px-20">
+        <div className="navbar bg-base-100 shadow-sm px-5 lg:px-20">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -10,27 +10,27 @@ const NavBar = () => {
                     </div>
                     <ul
                         tabIndex="-1"
-                        className="menu menu-sm dropdown-content text-base bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content text-base bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow">
                         <li><a>Home</a></li>
                         <li><a>FAQ</a></li>
                         <li><a>Changelog</a></li>
                         <li><a>Blog</a></li>
                         <li><a>Download</a></li>
                         <li><a>Contact</a></li>
-                        <li className='text-white text-base font-semibold bg-linear-to-br from-[#422AD5] to-[#9F62F2]'>+  New Ticket</li>
+                        <li className='text-white text-base font-semibold bg-linear-to-br from-[#422AD5] to-[#9F62F2] px-1'>+  New Ticket</li>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl font-bold">CS-Ticket System</a>
             </div>
             <div className="navbar-end">
-                <ul className="menu menu-horizontal px-1 text-base">
+                <ul className="menu menu-horizontal px-1 text-base hidden lg:flex flex-row">
                     <li><a>Home</a></li>
                     <li><a>FAQ</a></li>
                     <li><a>Changelog</a></li>
                     <li><a>Blog</a></li>
                     <li><a>Download</a></li>
                     <li><a>Contact</a></li>
-                    <li><a className='text-white text-base font-semibold bg-linear-to-br from-[#422AD5] to-[#9F62F2]'>+  New Ticket</a></li>
+                    <li><a className='text-white text-base font-semibold bg-linear-to-br from-[#422AD5] to-[#9F62F2] px-2'>+  New Ticket</a></li>
                 </ul>
             </div>
         </div>
