@@ -2,15 +2,11 @@ const TaskStatus = ({ tasks, resolved, onComplete }) => {
 
     return (
 
-        <div className="bg-white p-4 rounded-lg shadow">
-
-            <h2 className="font-semibold mb-4">
-                Task Status
-            </h2>
+        <div>
 
             {tasks.map(task => (
 
-                <div key={task.id} className="bg-gray-100 p-3 rounded mb-3">
+                <div key={task.id} className="bg-white p-3 rounded mb-3">
 
                     <p className="text-sm mb-2">
                         {task.title}
@@ -37,7 +33,7 @@ const TaskStatus = ({ tasks, resolved, onComplete }) => {
                 </p>
             ) : (
                 resolved.map(task => (
-                    <p key={task.id} className="text-sm text-gray-500 bg-[#E0E7FF] p-2">
+                    <p key={task.id} className="text-[#001931] text-base bg-[#E0E7FF] p-2 mt-1">
                         {task.title}
                     </p>
                 ))

@@ -51,28 +51,33 @@ const MainContent = () => {
                 />
 
             </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-5 lg:px-20 mt-10">
-
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 px-5 lg:px-20 mt-10">
                 {/* Ticket Grid */}
-                <div className="lg:col-span-2 lg:grid-cols-2 grid grid-cols-1 gap-4">
-
-                    {tickets.map(ticket => (
-                        <TicketCard
-                            key={ticket.id}
-                            ticket={ticket}
-                            onAdd={handleAddTask}
-                        />
-                    ))}
-
+                <div className="lg:col-span-3">
+                    <h2 className="text-xl font-semibold mb-4">
+                        Customer Tickets
+                    </h2>
+                    <div className='lg:grid-cols-2 grid grid-cols-1 gap-4'>
+                        {tickets.map(ticket => (
+                            <TicketCard
+                                key={ticket.id}
+                                ticket={ticket}
+                                onAdd={handleAddTask}
+                            />
+                        ))}
+                    </div>
                 </div>
-
-                {/* Task Status */}
-                <TaskStatus
-                    tasks={tasks}
-                    resolved={resolved}
-                    onComplete={handleComplete}
-                />
+                <div>
+                    <h2 className="text-xl font-semibold mb-4">
+                        Task Status
+                    </h2>
+                    {/* Task Status */}
+                    <TaskStatus
+                        tasks={tasks}
+                        resolved={resolved}
+                        onComplete={handleComplete}
+                    />
+                </div>
 
             </div>
         </div>

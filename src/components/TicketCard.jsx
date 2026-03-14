@@ -45,7 +45,7 @@ const TicketCard = ({ ticket, onAdd }) => {
             <p className="text-xs text-gray-500 mb-3">{ticket.description}</p>
 
             {/* Bottom */}
-            <div className="flex justify-between gap-0.5 items-center text-xs">
+            <div className="flex justify-between gap-0.5 items-center text-xs text-gray-500">
                 <span>{`#${1000 + ticket.id}`}</span>
                 {/* Priority */}
                 <span className={`${priorityColor[ticket.priority]} font-semibold uppercase`}>
@@ -62,6 +62,7 @@ const TicketCard = ({ ticket, onAdd }) => {
                 </span>
             </div>
         </div>
+
     );
 };
 

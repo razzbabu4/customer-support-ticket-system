@@ -20,7 +20,7 @@ const NavBar = () => {
                         <li className='text-white text-base font-semibold bg-linear-to-br from-[#422AD5] to-[#9F62F2] px-1'>+  New Ticket</li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl font-bold">CS-Ticket System</a>
+                <a className="btn btn-ghost text-xl font-bold">Support-Sphere</a>
             </div>
             <div className="navbar-end">
                 <ul className="menu menu-horizontal px-1 text-base hidden lg:flex flex-row">
