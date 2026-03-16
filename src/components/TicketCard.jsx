@@ -1,4 +1,4 @@
-import { CalendarIcon } from "@heroicons/react/24/outline";; // optional if you use heroicons
+import { CalendarIcon } from "@heroicons/react/24/outline";// optional if you use heroicons
 
 const TicketCard = ({ ticket, onAdd }) => {
     const statusColor = {

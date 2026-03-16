@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaEnvelope, FaFacebook, FaLinkedin, FaPhone } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -7,9 +8,10 @@ const Footer = () => {
                 <aside>
                     <h2 className='text-xl font-bold text-white'>Support-Sphere</h2>
                     <p>
-                        Providing reliable tech since 1992
+                        Providing reliable tech since 1992.
                     </p>
                 </aside>
+
                 <nav>
                     <h6 className="footer-title text-white">Services</h6>
                     <a className="link link-hover">Branding</a>
@@ -31,10 +33,12 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
                 <nav>
-                    <h6 className="footer-title text-white">Legal</h6>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <h6 className="footer-title text-white">Contact Us</h6>
+                    <a className="link link-hover flex gap-2 flex-row items-center"><FaPhone className="w-4 h-4" /> +8801677-889900</a>
+                    <a className="link link-hover flex gap-2 flex-row items-center"><FaEnvelope className="w-4 h-4" /> support@gmail.com</a>
+                    <a className="link link-hover flex gap-2 flex-row items-center"><FaFacebook className="w-4 h-4" /> www.facebook.sphere.com</a>
+                    <a className="link link-hover flex gap-2 flex-row items-center"><FaLinkedin className="w-4 h-4" /> www.support/linkedin.com</a>
+
                 </nav>
             </footer>
             <div className='border'></div>
